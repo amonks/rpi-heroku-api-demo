@@ -15,7 +15,7 @@ end
 
 get '/newtext/*' do
 	if params[:splat].length > 0
-		data.push(params[:splat])
+		data.unshift(params[:splat])
 	end
 	redirect '/'
 end
