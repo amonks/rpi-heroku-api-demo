@@ -55,15 +55,7 @@
 
 					// Get text from hash
 
-					var theText = "Hello three.js! :)";
-
-					var hash = document.location.hash.substr( 1 );
-
-					if ( hash.length !== 0 ) {
-
-							theText = hash;
-
-					}
+					var theText = "#{ @text }";
 
 					var text3d = new THREE.TextGeometry( theText, {
 
