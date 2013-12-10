@@ -9,8 +9,8 @@ data.push("Initial Data!")
 
 # serve pages
 get '/' do
-	@text = data.last.to_s
-	@text
+	@text = data
+	@text.to_s
 end
 
 get '/newtext/*' do
