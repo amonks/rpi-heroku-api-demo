@@ -5,7 +5,6 @@ Bundler.require
 
 # set up string array to keep sayings in
 data = Array.new
-data.push("Initial Data!")
 
 # serve pages
 get '/' do
