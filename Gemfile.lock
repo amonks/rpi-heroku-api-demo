@@ -1,7 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    erubis (2.7.0)
+    haml (4.0.4)
+      tilt
     rack (1.5.2)
     rack-protection (1.5.0)
       rack
@@ -15,5 +16,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  erubis
+  haml
   sinatra
