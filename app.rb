@@ -10,7 +10,7 @@ data.push("Initial Data!")
 # serve pages
 get '/' do
 	@text = data.last.to_s
-	liquid :threejs
+	erb :threejs
 end
 
 get '/newtext/*' do
