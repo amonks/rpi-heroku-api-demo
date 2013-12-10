@@ -13,7 +13,7 @@ get '/' do
 end
 
 get '/newtext/*' do
-	if params[:splat].length > 0
+	if params[:splat].length > 8
 		data.unshift(params[:splat])
 	end
 	redirect '/'
