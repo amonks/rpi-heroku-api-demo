@@ -8,10 +8,12 @@ data = Array.new
 
 # serve pages
 get '/' do
-  data.to_s
+	data.to_s
 end
 
 get '/newtext/*' do
-  data.push(params[:splat])
-  redirect '/'
+	if params[:splat].length > 0
+		data.push(params[:splat])
+	end
+	redirect '/'
 end
