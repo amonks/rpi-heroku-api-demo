@@ -13,7 +13,7 @@ get '/' do
 end
 
 get '/newtext/*' do
-	if params[:splat].length > 0
+	if params[:splat].join("").to_s.length > 0
 		data.unshift(params[:splat])
 	end
 	redirect '/'
