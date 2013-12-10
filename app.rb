@@ -10,7 +10,7 @@ data.push("Initial Data!")
 # serve pages
 get '/' do
 	@text = data.last.to_s
-	haml :threejs
+	@text
 end
 
 get '/newtext/*' do
@@ -18,4 +18,9 @@ get '/newtext/*' do
 		data.push(params[:splat])
 	end
 	redirect '/'
+end
+
+get '/threejs' do
+	@text = data
+	haml :threejs
 end
