@@ -5,10 +5,12 @@ Bundler.require
 
 # set up string array to keep sayings in
 data = Array.new
+data.push("Initial Data!")
 
 # serve pages
 get '/' do
-	data.to_s
+	@text = data.last.to_s
+	liquid threejs.html
 end
 
 get '/newtext/*' do
